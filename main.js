@@ -10,3 +10,7 @@ function Book(title, author, pages, readStatus) {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus ? 'read' : 'not read yet'}`;
   }
 }
+
+function addBookToLibrary(book) {
+  myLibrary.push(book);
+}
