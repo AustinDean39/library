@@ -47,3 +47,18 @@ addBookToLibrary(aGameOfThrones);
 
 const fahrenheit451 = new Book('Fahrenheit 451', 'Ray Bradbury', 194, false);
 addBookToLibrary(fahrenheit451);
+
+const dune = new Book("Dune", "Frank Herbert", 892, true);
+addBookToLibrary(dune);
+
+const aClashOfKings = new Book("A Clash of Kings", "George R.R. Martin", 1042, false);
+addBookToLibrary(aClashOfKings);
+
+const theGreatGatsby = new Book('The Great Gatsby', 'F. Scott Fitzgerald', 110, false);
+addBookToLibrary(theGreatGatsby);
+
+const book1984 = new Book('1984', 'George Orwell', 328, true);
+addBookToLibrary(book1984);
+
+const frankenstein = new Book('Frankenstein', 'Mary Shelley', 113, true);
+addBookToLibrary(frankenstein);
