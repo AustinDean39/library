@@ -38,3 +38,12 @@ function displayLibrary() {
     document.getElementById('shelf').appendChild(bookCard);
   }
 }
+
+const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 251, true);
+addBookToLibrary(theHobbit);
+
+const aGameOfThrones = new Book('A Game of Thrones', 'George R.R. Martin', 835, true);
+addBookToLibrary(aGameOfThrones);
+
+const fahrenheit451 = new Book('Fahrenheit 451', 'Ray Bradbury', 194, false);
+addBookToLibrary(fahrenheit451);
