@@ -13,6 +13,7 @@ function Book(title, author, pages, readStatus) {
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
+  myLibrary.sort((a, b) => (a.title > b.title) ? 1 : (b.title > a.title ? -1 : 0));
   displayLibrary();
 }
 
