@@ -40,6 +40,16 @@ function displayLibrary() {
   }
 }
 
+// Dialog modal initialization:
+// Connect to HTML Elements
+const formDialog = document.getElementById('bookFormDialog');
+const showFormButton = document.getElementById('btn--showForm');
+const closeFormButton = document.getElementById('btn--closeForm');
+
+// Set up show/hide buttons for 'Add a Book' form modal:
+showFormButton.addEventListener('click', () => formDialog.showModal());
+closeFormButton.addEventListener('click', () => formDialog.close());
+
 const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 251, true);
 addBookToLibrary(theHobbit);
 
