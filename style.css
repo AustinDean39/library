@@ -7,7 +7,7 @@ div {
   padding: 0.5rem;
 }
 div div {
-  max-width: 10em;
+  width: 10em;
 }
 
 #shelf {
@@ -16,4 +16,8 @@ div div {
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
   gap: 1rem;
+  justify-items: center;
+
+  width: 70%;
+  margin: auto;
 }
