@@ -13,6 +13,7 @@
     <hr>
     <form action="https://httpbin.org/post" method="post" id="addBookForm">
       <fieldset>
+        <legend>Add a Book</legend>
         <label for="title">Book Title:</label>
         <input type="text" name="title" id="title" placeholder="Title">
 
@@ -22,9 +23,16 @@
         <label for="pages">Number of Pages:</label>
         <input type="number" name="pages" id="pages" min="0">
 
-        <input type="checkbox" name="readStatus" id="readStatus" value="true">
-        <label for="readStatus">Read</label>
+        <fieldset>
+          <legend>Read Status</legend>
+          <input type="radio" name="readStatus" id="readTrue" value="true">
+          <label for="read">Read</label>
+
+          <input type="radio" name="readStatus" id="readFalse" value="false" checked>
+          <label for="unread">Not Read Yet</label>
+        </fieldset>
       </fieldset>
+      <hr>
       <button type="submit" id="addBookForm--submit-btn">Add to Library</button>
     </form>
   </dialog>
