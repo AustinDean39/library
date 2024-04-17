@@ -11,7 +11,7 @@
   <dialog id="bookFormDialog">
     <button id="btn--closeForm">Back</button>
     <hr>
-    <form action="https://httpbin.org/post" method="post" id="addBookForm">
+    <form id="addBookForm">
       <fieldset>
         <legend>Add a Book</legend>
         <label for="title">Book Title:</label>
@@ -26,10 +26,10 @@
         <fieldset>
           <legend>Read Status</legend>
           <input type="radio" name="readStatus" id="readTrue" value="true">
-          <label for="read">Read</label>
+          <label for="readTrue">Read</label>
 
           <input type="radio" name="readStatus" id="readFalse" value="false" checked>
-          <label for="unread">Not Read Yet</label>
+          <label for="readFalse">Not Read Yet</label>
         </fieldset>
       </fieldset>
       <hr>

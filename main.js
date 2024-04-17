@@ -3,7 +3,7 @@ const myLibrary = [];
 function Book(title, author, pages, readStatus) {
   this.title = title;
   this.author = author;
-  this.pages = pages;
+  this.pages = Number(pages);
   this.readStatus = Boolean(readStatus);
 
   this.info = function () {
@@ -50,6 +50,28 @@ const closeFormButton = document.getElementById('btn--closeForm');
 showFormButton.addEventListener('click', () => formDialog.showModal());
 closeFormButton.addEventListener('click', () => formDialog.close());
 
+// Function to add a new book from form info
+function addBookFromForm(event) {
+  // Stop page reload on submit
+  event.preventDefault();
+ 
+  // Get user input data for new Book object
+  const form = document.querySelector('#addBookForm');
+  const formAnswers = new FormData(form, document.getElementById('addBookForm--submit-btn'));
+  
+  // Create new book from form submission
+  const userBook = new Book(formAnswers.get('title'), formAnswers.get('author'), formAnswers.get('pages'), formAnswers.get('readStatus'));
+  addBookToLibrary(userBook);
+  
+  /* Reset the form values to show the data has been input and form is ready
+  for another book */
+  form.reset();
+}
+
+// Set up event handler for adding a book:
+document.getElementById('addBookForm--submit-btn').addEventListener('click', addBookFromForm);
+
+// Dummy Books for testing
 const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 251, true);
 addBookToLibrary(theHobbit);
 
