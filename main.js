@@ -4,7 +4,7 @@ function Book(title, author, pages, readStatus) {
   this.title = title;
   this.author = author;
   this.pages = Number(pages);
-  this.readStatus = Boolean(readStatus);
+  this.readStatus = readStatus == 'true' ? true : false;
 
   this.info = function () {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus ? 'read' : 'not read yet'}`;
